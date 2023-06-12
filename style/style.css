@@ -54,15 +54,52 @@
     margin-left: 100px;
 }
 .code{
+    
     color: white;
     float: right;
     width: 400px;
     height: 300px;
-    background-color: rgb(0, 0, 0);
+    background-color: black;
     margin-top: 80px;
     margin-right: 50px;
-    box-shadow: 5px 3px 2100px 1px rgb(31, 31, 31);
+    word-spacing: 2px;
+    line-height: 21px;
+    font-size: 20px;
+    font-family: 'poppins', sans-serif;
 }
+.c1{
+    display: inline;
+    color: aqua;   
+}
+.c2{
+    
+    color: rgb(173, 105, 232);
+}
+.c3{
+        
+        color: rgb(110, 255, 99);
+   
+}
+
+
+.text-out{
+    display: inline-block;
+    padding-left: 10px;
+    overflow: hidden;
+    white-space: nowrap;
+    animation: 
+    typing 2s steps(25) alternate infinite;
+    width: 0;
+}
+@keyframes typing{
+    from{ 
+        width: 0;
+    }
+    to{ 
+        width: 65%;
+    }
+}
+
 
 .info{
     background-color:black;
@@ -101,11 +138,11 @@
 }
 .main_body2{
     background-color:black;
-    height: 1400px;
+    height: 2100px;
     width: 100%;
 }
 .flip1{
-    background-color: black;
+    background-color: rgb(0, 0, 0);
     color: white;
     font-family: general sans-serif;
     padding-top: 90px;
@@ -118,17 +155,26 @@
 }
 #my_projects{
     background-color: rgb(42, 42, 42);
-    height: 300px;
+    height: 450px;
     width: 50%;
     margin-left: 25%;
-    margin-top: 20px;
+    margin-top: 50px;
     border-radius: 20px;
-    padding-top: 28px;
+    padding-top: 40px;
     
     
 }
+.projects-title{
+    text-align: center;
+    width: 130px;
+    color: white;
+    margin-left: 26%;
+    opacity: .4;
+    font-family: 'poppins', sans-serif;
+}
+
 #project_img{
-    height: 270px;
+    height: 90%;
     width: 250px;
     
     border-radius: 20px;
@@ -144,7 +190,7 @@
     width: 100%;
     display: flex;
     justify-content: space-between;
-    
+    padding-top: 40px;
     
 }
 .footer_left{
@@ -187,4 +233,44 @@
 }
 .footer_center{
     text-align: center  ;
+}
+
+hr{
+    border: 1px solid rgb(0, 0, 0);
+    background-color: transparent;
+    opacity: .8;
+}
+
+.word-flip span{
+    display: block;
+    height: 80px;
+    
+    animation: word_rotate 4s infinite;
+
+}
+
+.word-flip{
+    display: inline-block;
+    overflow: hidden;
+    height: 80px;
+}
+@keyframes word_rotate{
+    0%{
+        transform: translateY(0px);
+    }
+    25%{
+        transform: translateY(-80px);
+    }
+    50%{
+        transform: translateY(70px);
+    }
+    75%{
+        transform: translateY(px);
+    }
+    100%{
+        transform: translateY(-5px);
+    }
+}
+.flip-son{
+    height: 30px;
 }
