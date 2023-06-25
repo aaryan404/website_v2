@@ -2,8 +2,8 @@ window.addEventListener('DOMContentLoaded', function() {
     var div = document.querySelector('.projects-title');
     var windowHeight = window.innerHeight;
     var divHeight = div.offsetHeight;
-    var scrollOffset = 850; // Adjust this value to your desired scroll position
-    var slideInDelay = 100; // Adjust this value to your desired delay in milliseconds
+    var scrollOffset = 870; // Adjust this value to your desired scroll position
+    var slideInDelay = 50; // Adjust this value to your desired delay in milliseconds
   
     // Function to slide the div in
     function slideInDiv() {
@@ -27,5 +27,38 @@ window.addEventListener('DOMContentLoaded', function() {
       }
     });
   });
+
+
+  function flipWordInElement(className, targetWord) {
+    var elements = document.getElementsByClassName(className);
+  
+    // Iterate over each element with the specified class
+    for (var i = 0; i < elements.length; i++) {
+      var element = elements[i];
+      var sentence = element.innerHTML;
+      var words = sentence.split(' ');
+  
+      // Find the index of the target word
+      var index = words.indexOf(targetWord);
+  
+      // If the word is found, reverse its characters
+      if (index !== -1) {
+        var flippedWord = targetWord.split('').reverse().join('');
+        words[index] = flippedWord;
+      }
+  
+      // Join the array of words back into a sentence
+      var flippedSentence = words.join(' ');
+  
+      // Update the element's content with the flipped sentence
+      element.innerHTML = flippedSentence;
+    }
+  }
+  
+  // Example usage
+  var className = "flip-me";
+  var targetWord = "how";
+  flipWordInElement(className, targetWord);
+  
   
   
