@@ -1,3 +1,20 @@
+var $loader = document.querySelector('.loader')
+
+window.onload = function() {
+  setTimeout(function() {$loader.classList.remove('loader--active')}, 500)
+};
+
+document.querySelector('.btn').addEventListener('click', function () {
+  $loader.classList.add('loader--active')
+  
+  window.setTimeout(function () {
+    $loader.classList.remove('loader--active')
+  }, 5000)
+})
+
+
+
+
 window.addEventListener('DOMContentLoaded', function() {
     var div = document.querySelector('.projects-title');
     var windowHeight = window.innerHeight;
